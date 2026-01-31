@@ -1,47 +1,194 @@
-# AEGIS-OS // Industrial Command Center
+# 🛡️ Aegis-OS: Industrial Intelligence HUD
 
-Welcome to the **AEGIS-OS**, an industrial-grade "Project Intelligence" dashboard designed to showcase the elite career milestones and technical architecture of **Tahir Yamin**. This HUD-style interface provides a tactical overview of high-stakes engineering projects, Industrial AI research, and strategic assets.
+> **Google AI Challenge Submission** - Multi-Modal AI Portfolio  
+> Powered by Gemini 2.5-Flash
 
-## 🚀 Tactical Core Capabilities
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://agent-command-center-xi.vercel.app)
+[![Google AI](https://img.shields.io/badge/Google%20AI-Gemini%202.5--Flash-blue?style=for-the-badge&logo=google)](https://ai.google.dev)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
 
-- **Industrial Dev Stack**: Real-time visualization of local core competencies (Primavera P6, Power BI, AI/Python, Docker/K8s).
-- **Strategic Asset Repository**: A dedicated GitHub portfolio showcase with technical archival metrics and deployment-ready triggers.
-- **Intel Feed**: A synchronized briefing area for technical publications and mission logs.
-- **Neural Liaison (RAG)**: An integrated AI consultant capable of analyzing decentralized career intelligence and external technical datasets.
-- **HUD (Heads-Up Display)**: A responsive, high-fidelity UI built with modular components and tactical animations.
+## 🎯 Overview
 
-## 🛠️ Developmental Genesis & Tech Stack
+Aegis-OS is an industrial-grade command center that transforms static engineering documentation into interactive AI intelligence. Built for high-stakes operational environments like refineries, power plants, and manufacturing facilities.
 
-This project was architected using a cutting-edge "Plan -> Execute -> Verify" methodology, leveraging autonomous agents and tactical AI design tools.
+**Live Demo**: [https://agent-command-center-xi.vercel.app](https://agent-command-center-xi.vercel.app)
 
-### Intelligence & Orchestration
-| Tool | Utilization |
-| :--- | :--- |
-| **Antigravity** | The primary agentic orchestrator. Handled industrial HUD logic, hydration management, and complex JSX structural repairs. |
-| **Google AI Studio** | Facilitated rapid AI service prototyping and high-stakes Demo simulations for the RAG Liaison core. |
-| **Stitch Google** | Employed for high-fidelity architectural mocking and initial design layout verification. |
+## ✨ Features
 
-### Technical Architecture
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router Architectures)
-- **UI Logic**: [React 19](https://react.dev/) with Functional Hooks
-- **Styling**: [Vanilla CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [Tailwind CSS v4](https://tailwindcss.com/) (Atomic Design Patterns)
-- **Motion**: [Framer Motion](https://www.framer.com/motion/) (Tactical Component Transitions)
-- **Iconography**: [Lucide React](https://lucide.dev/) (Industrial Icons)
+### 1. 📊 P&ID Diagram Analysis (Vision AI)
+Upload engineering blueprints and receive instant:
+- Component identification (valves, sensors, pumps)
+- Flow logic analysis
+- Risk assessment and safety recommendations
 
-## 💡 Lessons Learned & Applied Protocols
+### 2. 📚 Ask The Manual (RAG AI)
+RAG-powered search through thousands of pages:
+- Query equipment manuals in natural language
+- Instant retrieval of relevant procedures
+- Context-aware responses
 
-1. **Hydration Synchronization**: Implementing strict `useEffect` mounting protocols to prevent mismatched UI states in complex HUD environments.
-2. **Tactical RAG Integration**: Designing "Handshake" protocols for the Neural Liaison to ensure AI responses are contextually aligned with local career data.
-3. **Responsive Intelligence**: Standardizing `lg:flex` and `xl:flex` thresholds to maintain visual integrity across standard resolutions at 100% zoom.
-4. **Structural Resilience**: Utilizing multi-stage artifact reviews and TypeScript compiler checks to resolve JSX parsing errors during rapid deployment cycles.
+### 3. 💬 24/7 Industrial Assistant
+AI persona trained for industrial environments:
+- Safety protocol guidance
+- Best practice recommendations
+- Operational support
 
-## 📜 Repository Artifacts
+## 🚀 Tech Stack
 
-Development history and bug-fix logs are stored within the `.brain` directory as high-fidelity artifacts:
-- `implementation_plan.md`: Tactical blueprints for feature expansion.
-- `walkthrough.md`: Detailed validation records and visual proof of implementation.
-- `task.md`: Comprehensive engineering checklists and progress logs.
+- **Frontend**: Next.js 15 (App Router) + TypeScript
+- **Styling**: Tailwind CSS + Custom HUD Animations
+- **AI Engine**: Google Gemini 2.5-Flash (Vision + RAG + Chat)
+- **Deployment**: Docker + Google Cloud Run + Vercel
+- **Architecture**: Dual-key API management with 5-tier retry logic
+
+## 🎨 Industrial HUD Design
+
+- **Tactical Borders**: Polygon-clipped frames mimicking physical hardware
+- **Biometric Scanlines**: Continuous monitoring animations
+- **Digital Grain**: SVG noise overlay for authentic industrial feel
+- **RGB Glitch Effects**: Subtle interference on interaction
+
+## 🏗️ Getting Started
+
+### Prerequisites
+
+- Node.js 20+ 
+- npm or pnpm
+- Google Gemini API key ([Get one here](https://ai.google.dev))
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Tahir-yamin/aegis-os-challenge.git
+cd aegis-os-challenge
+```
+
+2. **Install dependencies**
+```bash
+npm install
+# or
+pnpm install
+```
+
+3. **Set up environment variables**
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+NEXT_PUBLIC_RAG_API_KEY=your_rag_api_key_here
+```
+
+> **Note**: Never commit your `.env.local` file. It's already in `.gitignore`.
+
+4. **Run the development server**
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🐳 Docker Deployment
+
+### Build the Docker image
+
+```bash
+docker build -t aegis-os .
+```
+
+### Run the container
+
+```bash
+docker run -p 8080:8080 \
+  -e NEXT_PUBLIC_GEMINI_API_KEY=your_key \
+  -e NEXT_PUBLIC_RAG_API_KEY=your_key \
+  aegis-os
+```
+
+## ☁️ Cloud Run Deployment
+
+### Prerequisites
+- Google Cloud SDK installed
+- Cloud Run, Cloud Build, and Secret Manager APIs enabled
+
+### Deploy
+
+```bash
+# Create secrets
+echo -n "your_gemini_key" | gcloud secrets create GEMINI_API_KEY --data-file=-
+echo -n "your_rag_key" | gcloud secrets create RAG_API_KEY --data-file=-
+
+# Grant permissions
+gcloud secrets add-iam-policy-binding GEMINI_API_KEY \
+  --member="serviceAccount:PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+  --role="roles/secretmanager.secretAccessor"
+
+# Build and deploy
+gcloud builds submit --tag gcr.io/PROJECT_ID/aegis-os
+
+gcloud run deploy aegis-os \
+  --image gcr.io/PROJECT_ID/aegis-os \
+  --platform managed \
+  --region us-east1 \
+  --allow-unauthenticated \
+  --port 8080 \
+  --set-secrets="NEXT_PUBLIC_GEMINI_API_KEY=GEMINI_API_KEY:latest,NEXT_PUBLIC_RAG_API_KEY=RAG_API_KEY:latest" \
+  --labels dev-tutorial=devnewyear2026
+```
+
+## 🔒 Security
+
+- ✅ API keys stored in environment variables (never committed)
+- ✅ Google Secret Manager integration for production
+- ✅ `.env.local` in `.gitignore`
+- ✅ No hardcoded credentials
+
+## 🛠️ API Resilience
+
+Built for 24/7 industrial uptime:
+
+- **Dual-Key Architecture**: Separate keys for chat vs. resource-intensive operations
+- **5-Tier Retry Logic**: Smart exponential backoff with daily vs. minute-limit detection
+- **Error Recovery**: Graceful degradation and user feedback
+
+## 📁 Project Structure
+
+```
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Home page with HUD interface
+│   └── api/               # API routes
+├── components/            # React components
+├── services/             # Gemini service layer
+├── public/               # Static assets
+├── Dockerfile            # Production container
+└── tailwind.config.ts    # Styling configuration
+```
+
+## 🤝 Contributing
+
+This is a challenge submission project, but feedback and suggestions are welcome!
+
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+## 👨‍💻 Author
+
+**Tahir Yamin**
+- GitHub: [@Tahir-yamin](https://github.com/Tahir-yamin)
+- Email: tahiryamin2014@gmail.com
+
+## 🏆 Google AI Challenge
+
+This project is a submission for the [New Year, New You Portfolio Challenge](https://dev.to/challenges/new-year-new-you-google-ai-2025-12-31) presented by Google AI.
+
+**Challenge Requirements Met:**
+- ✅ Deployed to Google Cloud Run
+- ✅ Uses Gemini 2.5-Flash multimodal capabilities
+- ✅ Production-ready with proper error handling
+- ✅ Live demo available
 
 ---
-*AEGIS-OS v4.0.2 // STABLE_READY*
-*Sync Status: [OPTIMAL]*
+
+**Built with ❤️ using Google Gemini AI**
