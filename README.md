@@ -177,7 +177,6 @@ MIT License - see LICENSE file for details
 
 **Tahir Yamin**
 - GitHub: [@Tahir-yamin](https://github.com/Tahir-yamin)
-- Email: tahiryamin2014@gmail.com
 
 ## 🏆 Google AI Challenge
 
